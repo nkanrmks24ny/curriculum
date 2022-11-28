@@ -12,8 +12,9 @@
 ＞AP単体で動くもので、APごとに設定する。
 ＞会社よりも一般家庭で使われる
 
-・CSMA/CA
-＞無線LANで採用されている媒体アクセス制御方式で、同一のチャネルに複数のユーザーがアクセスする際の競合を回避する方式
+・CSMA/CA（Carrier Sense Multiple Access Collision Avoidance）
+＞無線LANにおけるコリジョンを回避する通信方式
+＞
 
 ・SOHO（Small Office/Home Office）
 ＞の略で、会社と自宅をインターネットでむすんで仕事場にしたもの
