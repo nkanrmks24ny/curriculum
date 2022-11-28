@@ -17,7 +17,7 @@
 ＞
 
 ・SOHO（Small Office/Home Office）
-＞の略で、会社と自宅をインターネットでむすんで仕事場にしたもの
+＞Small Office/Home Officeの略で、会社と自宅をインターネットでむすんで仕事場にしたもの
 
 ・BSS（Basic Service Set：基本サービスセット）
 ＞IEEE 802.11で定義される無線LANシステムにおいて，基本となる一つの基地局とその配下にある複数の端末局から構成されるネットワークのこと
