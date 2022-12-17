@@ -1,0 +1,48 @@
+ログインユーザ名：freeks
+ログインパスワード：bb
+イネーブルパスワード：enable
+
+①vlanの作成
+vlan 10
+
+②PC0,PC1の設定
+hostname(config-if)#switchport mode access
+hostname(config-if)#switchport access vlan 10
+hostname(config-if)#switchport port-security
+hostname(config-if)#switchport port-security maximum 1
+hostname(config-if)#switchport port-security mac-address [MACｱﾄﾞﾚｽ]
+hostname(config-if)#switchport port-security violation shutdown
+
+③PC2の設定
+hostname(config-if)#switchport mode access
+hostname(config-if)#switchport access vlan 10
+hostname(config-if)#switchport port-security
+hostname(config-if)#switchport port-security maximum 2
+hostname(config-if)#switchport port-security mac-address sticky
+hostname(config-if)#switchport port-security violation restrict
+
+④スイッチのFa0/4の設定
+hostname(config-if)#switchport mode access
+hostname(config-if)#switchport access vlan 10
+
+⑤スイッチのG0/1の設定
+hostname(config-if)#switchport mode trunk
+hostname(config-if)#switchport trunk allowed vlan 10
+
+⑥RouterのG0/1の設定
+hostname(config-subif)#interface gigabitethernet 0/1.10
+hostname(config-subif)#encapsulation dot1q 10
+hostname(config-subif)#ip address 192.168.1.254 255.255.255.0
+hostname(config-subif)#exit
+
+hostname(config-if)#interface gigabitethernet 0/1
+hostname(config-if)#no shutdown
+
+⑦サーバ側でaaaの設定
+
+⑧ルータ側でaaaの設定
+
+⑨イネーブルパスワードの設定と暗号化（今回はenableで設定）
+hostname#enable secret enable
+
+確認コマンド：show port-security
