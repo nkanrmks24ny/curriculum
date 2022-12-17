@@ -44,5 +44,7 @@ hostname(config-if)#no shutdown
 
 ⑨イネーブルパスワードの設定と暗号化（今回はenableで設定）
 hostname#enable secret enable
+hostname#aaa authentication enable default enable
+
 
 確認コマンド：show port-security
